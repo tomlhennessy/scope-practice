@@ -11,7 +11,13 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
 const arrowAvgValue = array => {
-  // Your code here
+  // calculate sum of all numbers in array using reduce
+  const sum = array.reduce((acc, val) => acc + val, 0);
+
+  // calculate average
+  const average = sum / array.length
+
+  return average;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
