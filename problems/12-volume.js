@@ -23,23 +23,13 @@ console.log(table2(1)); // prints 6
 console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
+
 function recVolume(height) {
-  let volume = height; // initialise volume with provided height
-  return function(width) { // return function that accepts width
-    if (typeof width !== 'undefined') { // if width is provided
-      volume *= width; // multiply current volume by width
-      return function(length) { // return function that accepts length
-        if (typeof length !== 'undefined'){ // if length is provided
-          volume *= length; // multiply current volume by length
-          return volume;
-        } else {
-          return volume; // return current volume if length not provided
-        }
-      };
-    } else {
-      return volume; // return current volume if width not provided
-    }
-  }
+  return function(width) {
+    return function(length) {
+      return height * width * length;
+    };
+  };
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

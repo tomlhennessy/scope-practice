@@ -12,7 +12,7 @@ arrowRestSum(0); // => 0
 
 const arrowRestSum = (...otherNums) => {
   // use reduce method to sum up all parameters
-  return params.reduce((acc, val) => acc + val, 0);
+  return otherNums.reduce((acc, val) => acc + val, 0);
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

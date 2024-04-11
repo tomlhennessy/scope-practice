@@ -17,7 +17,7 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 // takes in a person object as a parameter
 const arrowGetFullName = person => {
   // return a string concatenating first name and last name properties
-  return '${person.firstName} ${person.lastName}';
+  return `${person.firstName} ${person.lastName}`;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

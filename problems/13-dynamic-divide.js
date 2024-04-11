@@ -19,8 +19,21 @@ divideByFive(50); // returns 10
 ***********************************************************************/
 
 function dynamicDivide(divisor) {
-  // Your code here
+  // return a new function that accepts a number argument
+  return function(number) {
+    // divide the number by the divisor captured from the outer function's scope
+    return number / divisor;
+  };
 }
+
+const halfer = dynamicDivide(2); // returns a function
+console.log(halfer(20)); // returns 10
+
+const divideByThree = dynamicDivide(3);
+console.log(divideByThree(30)); // returns 10
+
+const divideByFive = dynamicDivide(5);
+console.log(divideByFive(50)); // returns 10
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

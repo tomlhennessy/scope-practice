@@ -27,24 +27,25 @@ Example 4:
   console.log(threeDays()); // prints "Happy New Year!"
 
 ***********************************************************************/
+
 function countDownTimer(num) {
   if (num <= 0) {
     return "Happy New Year!";
   } else {
-    // if n is greater than 0
-    let count = n;
+    // if num is greater than 0
+    let count = num; // Use 'num' instead of 'n'
     // return a function that decrements countdown variable to 'count'
     // and calls countDownTimer recursively
     return function() {
       if (count <= 0) {
         return "Happy New Year!";
+      } else { // Corrected indentation and added block for else statement
+        // if count is greater than 0, decrement count by 1
+        count--;
+        // call countDownTimer recursively with the decremented count
+        return countDownTimer(count);
       }
-    } else {
-      // if count is greater than 0, decrement count by 1
-      count--;
-      // call countDownTimer recursively with the decremented count
-      return countDownTimer(count);
-    }
+    };
   }
 }
 

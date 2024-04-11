@@ -24,9 +24,9 @@ const sandwichMaker = () => {
   // return a function that accepts a new ingredient and updates the order
   return ingredient => {
     // add the new ingredient to the order
-    order += ' and ${ingredient}';
+    order += ` and ${ingredient}`;
     // return updated sandwich order
-    return 'One sandwich with ${order}';
+    return `One sandwich with ${order}`;
   }
 }
 
